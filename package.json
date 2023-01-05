@@ -1,0 +1,22 @@
+{
+  "name": "coltsteele-js_dsa_masterclass",
+  "version": "1.0.0",
+  "description": "Repo for practice problems for the JS DSA Colt Steele Masterclass",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest test/.*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jojortz/ColtSteele-JS_DSA_Masterclass.git"
+  },
+  "author": "Jojo Ortiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jojortz/ColtSteele-JS_DSA_Masterclass/issues"
+  },
+  "homepage": "https://github.com/jojortz/ColtSteele-JS_DSA_Masterclass#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
