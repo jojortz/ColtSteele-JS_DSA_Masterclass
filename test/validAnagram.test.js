@@ -1,4 +1,3 @@
-//import { expect, jest, test } from '@jest/globals';
 const validAnagram = require("../ProblemSolvingPatterns/FrequencyCounter/validAnagram");
 
 const examples = [

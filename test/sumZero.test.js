@@ -1,4 +1,3 @@
-//import { expect, jest, test } from '@jest/globals';
 const sumZero = require("../ProblemSolvingPatterns/MultiplePointers/sumZero");
 
 const examples = [
