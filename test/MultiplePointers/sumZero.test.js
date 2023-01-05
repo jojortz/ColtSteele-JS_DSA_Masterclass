@@ -1,4 +1,4 @@
-const sumZero = require("../ProblemSolvingPatterns/MultiplePointers/sumZero");
+const sumZero = require("../../ProblemSolvingPatterns/MultiplePointers/sumZero");
 
 const examples = [
   {

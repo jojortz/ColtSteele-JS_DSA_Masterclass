@@ -1,4 +1,4 @@
-const validAnagram = require("../ProblemSolvingPatterns/FrequencyCounter/validAnagram");
+const validAnagram = require("../../ProblemSolvingPatterns/FrequencyCounter/validAnagram");
 
 const examples = [
   {
@@ -22,7 +22,7 @@ const examples = [
 describe("Anagrams", () => {
   examples.forEach((example) => {
     test(`Input: ${JSON.stringify(example.input)}`, () => {
-      expect(validAnagram(example.input[0], example.input[1])).toBe(example.expected);
+      expect(validAnagram(...example.input)).toBe(example.expected);
     });
   });
 });

@@ -1,4 +1,4 @@
-const countUniqueValues = require("../ProblemSolvingPatterns/MultiplePointers/countUniqueValues");
+const countUniqueValues = require("../../ProblemSolvingPatterns/MultiplePointers/countUniqueValues");
 
 const examples = [
   {
