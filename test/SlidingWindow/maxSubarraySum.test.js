@@ -18,6 +18,18 @@ const examples = [
     expected: 13
   },
   {
+    input: [[100,200,300,400], 2],
+    expected: 700
+  },
+  {
+    input: [[3,-2,7,-4,1,-1,4,-2,1],2],
+    expected: 5
+  },
+  {
+    input: [[2, 3], 3],
+    expected: null
+  },
+  {
     input: [[], 6],
     expected: null
   },
