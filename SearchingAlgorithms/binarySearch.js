@@ -22,7 +22,7 @@ const binarySearch = (arr, val) => {
       left = middle + 1;
     }
     middle = Math.floor((right + left) / 2);
-  };
+  }
   if (arr[middle] === val) return middle;
   return -1;
 };

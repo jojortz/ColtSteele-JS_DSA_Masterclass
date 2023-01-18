@@ -1,6 +1,6 @@
-const bubbleSort = require("../../SortingAlgorithms/bubbleSort");
+const quickSort = require("../../SortingAlgorithms/quickSort");
 
-let examples = [
+const examples = [
   {
     input: [5, 4, 2, 1, 3],
     expected: [1, 2, 3, 4, 5]
@@ -19,10 +19,10 @@ let examples = [
   },
 ];
 
-describe("bubbleSort", () => {
+describe("quickSort", () => {
   examples.forEach((example) => {
     test(`Input: ${JSON.stringify(example.input)}`, () => {
-      expect(bubbleSort(example.input)).toEqual(example.expected);
+      expect(quickSort(example.input)).toEqual(example.expected);
     });
   });
 });

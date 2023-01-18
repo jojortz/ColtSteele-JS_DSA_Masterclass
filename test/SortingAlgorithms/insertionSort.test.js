@@ -1,4 +1,4 @@
-const bubbleSort = require("../../SortingAlgorithms/bubbleSort");
+const selectionSort = require("../../SortingAlgorithms/selectionSort");
 
 let examples = [
   {
@@ -19,10 +19,10 @@ let examples = [
   },
 ];
 
-describe("bubbleSort", () => {
+describe("selectionSort", () => {
   examples.forEach((example) => {
     test(`Input: ${JSON.stringify(example.input)}`, () => {
-      expect(bubbleSort(example.input)).toEqual(example.expected);
+      expect(selectionSort(example.input)).toEqual(example.expected);
     });
   });
 });
