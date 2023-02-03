@@ -5,17 +5,6 @@ let nodeVals = [1, 2, 3, 4, 5, 6];
 describe('SinglyLinkedList', () => {
   let stack = new Stack();
 
-  // beforeEach(() => {
-  //   let thisNode = list.head;
-  //   while (thisNode) {
-  //     list.pop();
-  //     thisNode = list.head;
-  //   }
-  //   nodeVals.forEach((val) => {
-  //     list.push(val);
-  //   });
-  // })
-
   describe('Push', () => {
 
     test(`Should push ${nodeVals} to list`, () => {
