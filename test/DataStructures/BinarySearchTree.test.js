@@ -32,4 +32,10 @@ describe('BinarySearchTree', () => {
       expect(BST.find(10)).toBe(false);
     });
   })
+
+  describe('Breadth First Search', ()=> {
+    test('It should perform a BFS', () => {
+      expect(BST.BFS()).toEqual([2, 0, 3, 1]);
+    })
+  });
 })

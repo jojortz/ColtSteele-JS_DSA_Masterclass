@@ -39,13 +39,25 @@ class BinarySearchTree {
   find(val) {
     if (this.root === null) return false;
     let currNode = this.root;
-    while(currNode) {
+    while (currNode) {
       if (currNode.value === val) return currNode;
       if (currNode.value > val) currNode = currNode.left;
       else currNode = currNode.right;
     }
     return false;
   }
-}
+  BFS() {
+    if (this.root === null) return null;
+    let nodeQueue = [this.root];
+    let result = [];
+    while (nodeQueue.length) {
+      let thisNode = nodeQueue.shift();
+      result.push(thisNode.value);
+      if (thisNode.left) nodeQueue.push(thisNode.left);
+      if (thisNode.right) nodeQueue.push(thisNode.right);
+    }
+    return result;
+  }
+};
 
 module.exports = BinarySearchTree;
