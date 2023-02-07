@@ -42,6 +42,7 @@ describe('MaxBinaryHeap', () => {
     expect(maxHeap.values).toEqual([12]);
     expect(maxHeap.extractMax()).toBe(12);
     expect(maxHeap.values).toEqual([]);
+    expect(maxHeap.extractMax()).toBe(undefined);
   })
 
 })
