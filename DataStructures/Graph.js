@@ -42,7 +42,25 @@ class Graph {
       }
       delete this.adjacencyList[vertex];
     }
-  };
+  }
+
+  DFS_recursive(vertex) {
+    let list = [];
+    let visited = {};
+
+    function recurse(vertex, adjacencyList) {
+      if (adjacencyList[vertex].length === 0) return;
+      list.push(vertex);
+      visited[vertex] = true;
+      adjacencyList[vertex].forEach((neighbor) => {
+        if (!visited.hasOwnProperty(neighbor)) {
+          recurse(neighbor, adjacencyList);
+        }
+      })
+    }
+    recurse(vertex, this.adjacencyList);
+    return list;
+  }
 }
 
 module.exports = Graph;
