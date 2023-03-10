@@ -55,7 +55,7 @@ describe('Graph', () => {
     }
   });
 
-  test("DFS should return a list of all the vertices", () => {
+  test("DFS_recursive should return a list of all the vertices", () => {
     testGraph.addEdge(vertices[0], vertices[1]);
     testGraph.addEdge(vertices[0], vertices[2]);
     testGraph.addEdge(vertices[1], vertices[3]);
@@ -65,7 +65,43 @@ describe('Graph', () => {
     testGraph.addEdge(vertices[4], vertices[5]);
     vertices.forEach((initV) => {
       const dfsVertices = testGraph.DFS_recursive(initV);
-      expect(vertices.length).toBe(dfsVertices.length);
+      console.log(initV, dfsVertices);
+      expect(dfsVertices.length).toBe(vertices.length);
+      vertices.forEach((v) => {
+        expect(dfsVertices.includes(v)).toBe(true);
+      })
+    })
+  });
+
+  test("DFS_iterative should return a list of all the vertices", () => {
+    testGraph.addEdge(vertices[0], vertices[1]);
+    testGraph.addEdge(vertices[0], vertices[2]);
+    testGraph.addEdge(vertices[1], vertices[3]);
+    testGraph.addEdge(vertices[2], vertices[4]);
+    testGraph.addEdge(vertices[3], vertices[4]);
+    testGraph.addEdge(vertices[3], vertices[5]);
+    testGraph.addEdge(vertices[4], vertices[5]);
+    vertices.forEach((initV) => {
+      const dfsVertices = testGraph.DFS_iterative(initV);
+      console.log(initV, dfsVertices);
+      expect(dfsVertices.length).toBe(vertices.length);
+      vertices.forEach((v) => {
+        expect(dfsVertices.includes(v)).toBe(true);
+      })
+    })
+  });
+  test("BFS should return a list of all the vertices", () => {
+    testGraph.addEdge(vertices[0], vertices[1]);
+    testGraph.addEdge(vertices[0], vertices[2]);
+    testGraph.addEdge(vertices[1], vertices[3]);
+    testGraph.addEdge(vertices[2], vertices[4]);
+    testGraph.addEdge(vertices[3], vertices[4]);
+    testGraph.addEdge(vertices[3], vertices[5]);
+    testGraph.addEdge(vertices[4], vertices[5]);
+    vertices.forEach((initV) => {
+      const dfsVertices = testGraph.BFS(initV);
+      console.log(initV, dfsVertices);
+      expect(dfsVertices.length).toBe(vertices.length);
       vertices.forEach((v) => {
         expect(dfsVertices.includes(v)).toBe(true);
       })

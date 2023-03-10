@@ -48,18 +48,64 @@ class Graph {
     let list = [];
     let visited = {};
 
-    function recurse(vertex, adjacencyList) {
+    function dfs(vertex, adjacencyList) {
       if (adjacencyList[vertex].length === 0) return;
       list.push(vertex);
       visited[vertex] = true;
       adjacencyList[vertex].forEach((neighbor) => {
-        if (!visited.hasOwnProperty(neighbor)) {
-          recurse(neighbor, adjacencyList);
+        if (!visited[neighbor]) {
+          dfs(neighbor, adjacencyList);
         }
       })
     }
-    recurse(vertex, this.adjacencyList);
+    dfs(vertex, this.adjacencyList);
     return list;
+  }
+
+  DFS_iterative(vertex) {
+    let result = [];
+    let stack = [vertex];
+    let visited = {};
+    visited[vertex] = true;
+    /*while (stack.length) {
+      let thisVertex = stack.pop();
+      if (!visited[thisVertex]) {
+        result.push(thisVertex);
+        visited[thisVertex] = true;
+        this.adjacencyList[thisVertex].forEach((neighbor) => {
+          stack.push(neighbor)
+        })
+      }
+    }*/
+    while (stack.length) {
+      let thisVertex = stack.pop();
+      result.push(thisVertex);
+      this.adjacencyList[thisVertex].forEach((neighbor) => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true;
+          stack.push(neighbor);
+        }
+      })
+    }
+    return result;
+  }
+
+  BFS(vertex) {
+    let result = [];
+    let queue = [vertex];
+    let visited = {};
+    visited[vertex] = true;
+    while (queue.length) {
+      let thisVertex = queue.shift();
+      result.push(thisVertex);
+      this.adjacencyList[thisVertex].forEach( neighbor => {
+        if (!visited[neighbor]) {
+          visited[neighbor] = true;
+          queue.push(neighbor);
+        }
+      })
+    }
+    return result;
   }
 }
 
