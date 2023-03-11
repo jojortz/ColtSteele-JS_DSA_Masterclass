@@ -40,15 +40,15 @@ describe('Weighted Graph', () => {
     testGraph.addEdge("D", "F", 1);
     testGraph.addEdge("E", "F", 1);
 
-    expect(testGraph.Dijkstras_v1("A", "B")[0]).toBe(4);
-    expect(testGraph.Dijkstras_v1("A", "C")[0]).toBe(2);
-    expect(testGraph.Dijkstras_v1("A", "D")[0]).toBe(4);
-    expect(testGraph.Dijkstras_v1("A", "E")[0]).toBe(6);
-    expect(testGraph.Dijkstras_v1("A", "F")[0]).toBe(5);
-    expect(testGraph.Dijkstras_v1("A", "B")[1]).toEqual(["A", "B"]);
-    expect(testGraph.Dijkstras_v1("A", "C")[1]).toEqual(["A", "C"]);
-    expect(testGraph.Dijkstras_v1("A", "D")[1]).toEqual(["A", "C", "D"]);
-    expect(testGraph.Dijkstras_v1("A", "E")[1]).toEqual(["A", "C", "D", "F", "E"]);
-    expect(testGraph.Dijkstras_v1("A", "F")[1]).toEqual(["A", "C", "D", "F"]);
+    expect(testGraph.Dijkstra("A", "B")[0]).toBe(4);
+    expect(testGraph.Dijkstra("A", "C")[0]).toBe(2);
+    expect(testGraph.Dijkstra("A", "D")[0]).toBe(4);
+    expect(testGraph.Dijkstra("A", "E")[0]).toBe(6);
+    expect(testGraph.Dijkstra("A", "F")[0]).toBe(5);
+    expect(testGraph.Dijkstra("A", "B")[1]).toEqual(["A", "B"]);
+    expect(testGraph.Dijkstra("A", "C")[1]).toEqual(["A", "C"]);
+    expect(testGraph.Dijkstra("A", "D")[1]).toEqual(["A", "C", "D"]);
+    expect(testGraph.Dijkstra("A", "E")[1]).toEqual(["A", "C", "D", "F", "E"]);
+    expect(testGraph.Dijkstra("A", "F")[1]).toEqual(["A", "C", "D", "F"]);
   })
 })

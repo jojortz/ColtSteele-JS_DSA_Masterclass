@@ -26,7 +26,7 @@ class WeightedGraph {
     }
   }
 
-  Dijkstras_v1(start, end) {
+  Dijkstra(start, end) {
     let distances = {};
     let previous = {};
     let path = [];
